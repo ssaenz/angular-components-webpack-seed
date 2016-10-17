@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World, AngularJS 1.5 + components + webpack</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="dist/vendor.bundle.js"></script>
+	<script src="dist/app.bundle.js"></script>
+</head>
+<body ng-app="HelloApp">
+	<div ng-controller="HelloController as helloCtrl">
+		<h3>Hello controller</h3>
+  	<span>Hello controller variable = {{globalVariable}}</span><button ng-click="increaseGlobal()"><span class="glyphicon glyphicon-plus"></span></button>
+		<componentone></componentone>
+	</div>
+	<div ng-controller="ByeController as byeCtrl">
+		<h3>Bye controller</h3>
+  	<span>Bye controller variable = {{globalVariable}}</span><button ng-click="increaseGlobal()"><span class="glyphicon glyphicon-plus"></span></button>
+		<componentone></componentone>
+	</div>
+
+</body>
+</html>
